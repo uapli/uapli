@@ -11131,15 +11131,15 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 .projects-section .featured-text {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 @media (min-width: 992px) {
   .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    padding: 0 0 0 1.5rem;
+    border-left: 0.5rem solid #3c1f5e;
   }
 }
 .projects-section .project-text {
