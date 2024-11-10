@@ -612,6 +612,7 @@ progress {
 .img-fluid {
   max-width: 55%;
   height: auto;
+  transition: opacity 0.3s ease;
 }
 
 .img-thumbnail {
@@ -686,6 +687,8 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  align-items: center;
+  justify-content: center;
 }
 .row > * {
   flex-shrink: 0;
@@ -1301,6 +1304,7 @@ progress {
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
+    position: relative;
   }
   .col-lg-7 {
     flex: 0 0 auto;
@@ -11148,6 +11152,8 @@ body {
   .projects-section .featured-text {
     padding: 0 0 0 1.5rem;
     border-left: 0.5rem solid #3c1f5e;
+    position: relative;
+    z-index: 1;
   }
 }
 .projects-section .project-text {
@@ -11219,4 +11225,52 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); Centra el texto 
+  width: 80%; Ancho del texto, ajustable 
+  background: rgba(0, 0, 0, 0.5); Fondo semitransparente 
+  color: white;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+} */
+
+.col-lg-6:hover .overlay-text {
+  opacity: 1;
+}
+
+.overlay-text a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.overlay-text a:hover {
+  text-decoration: underline;
 }
